@@ -1,0 +1,148 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F3F4F6;
+}
+
+.container{
+    background-color: #FFFFFF;
+    width: 50vh;
+    align-items: center;
+    padding: 25px;
+    border-radius: 7px;
+    border: 1px solid;
+    border-color: hsl(240 5.9% 90%);
+    width: 90%;
+    max-width: 400PX;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.cadastrar:hover{
+    background-color: #303035;
+    transition: 150ms linear;
+}
+
+.cadastrar{
+    border-radius: 5px;
+    width: 100%;
+    background-color: #18181B;
+    color: #FAFAFA;
+    padding: 10px;
+    font-size: small;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btnstyle{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logincontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 25px;
+}
+
+h2{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    color: hsl(240, 1%, 65%);
+    font-size: small;
+}
+
+label {
+    font-family: Arial, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #18181B;
+}
+
+.labelinputname{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.labelinputpassword{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    border: 1px solid  hsl(240 5.9% 90%);
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    margin-top: 8px;
+    padding: 10px;
+    font-size: small;
+    background-color: white;
+}
+
+input::placeholder{
+    color: hsl(240, 1%, 65%);
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid hsl(240 5.9% 90%);
+    box-shadow: 0 0 5px hsl(240 5.9% 90%);
+}
+
+.signupmessage{
+    color: hsl(240, 1%, 65%)B;
+}
+
+.paragraphstyle{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+}
+
+a {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin-left: 1px;
+    font-weight: bolder;
+    cursor: pointer;
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: black; /* opcional: cor do texto */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+small {
+    color: #e1c542	;
+    font-weight: bold;
+    font-size: small;
+    font-family: Arial, sans-serif;
+}
+

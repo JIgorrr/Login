@@ -1,0 +1,66 @@
+<div class="main">
+    <div class="container">
+        <div class="registercontainer">
+            <h2>Register</h2>
+            <p>Register with your name and email and password.</p>
+        </div>
+        <form [formGroup]="registerFormGroup" (ngSubmit)="registerUser()">
+            <div class="labelinputname">
+                <label>Name:</label>
+                <input type="text" formControlName="name" name="Name" placeholder="Enter your email">
+                @if(registerFormGroup.get('name')?.invalid && submitted){
+                    @if(registerFormGroup.get('name')?.errors?.['required']){
+                        <small>Name is required</small>
+                    }@else if(registerFormGroup.get('name')?.errors?.['pattern']){
+                        <small>Name is invalid</small>
+                    }
+                }
+            </div>
+            <div class="labelinputemail">
+                <label>Email:</label>
+                <input type="email" formControlName="email" name="Email" placeholder="Enter your email">
+                @if(registerFormGroup.get('email')?.invalid && submitted){
+                    @if(registerFormGroup.get('email')?.errors?.['required']){
+                        <small>Email is required</small>
+                    }@else if(registerFormGroup.get('email')?.errors?.['email']){
+                        <small>Email is invalid</small>
+                    }
+                }
+            </div>
+            <div class="labelinputpassword">
+                <label>Password:</label>
+                <input type="password" formControlName="password" name="Password" placeholder="Enter your password">
+                @if(registerFormGroup.get('password')?.invalid && submitted){
+                    @if(registerFormGroup.get('password')?.errors?.['required']){
+                        <small>Password is required</small>
+                    }
+                }
+            </div>
+            <div>
+                <label>Plans:</label>
+                <select formControlName="plan">
+                    <option value="" disabled selected>Select a plan</option>
+                    @for(plan of plans; track plan.id){
+                        <option [value]="plan.id">{{ plan.roleName }}</option>
+                    }
+                </select>
+                @if(registerFormGroup.get('plan')?.invalid && submitted){
+                    @if(registerFormGroup.get('plan')?.errors?.['required']){
+                        <small>Plan is required</small>
+                    }
+                }
+            </div>
+            <div class="backlogin">
+                <svg [routerLink]="['/login']" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+            </div>
+            <div class="registerstyle">
+                <button class="sendstyle" type="submit">
+                    Register
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
